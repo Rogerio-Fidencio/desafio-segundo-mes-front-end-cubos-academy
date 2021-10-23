@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 0px 15px;
+    background: #A785ED;
+    margin-bottom: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 150%;
+    color: #FDFDFD;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 400px;
+    height: 46px;
+    padding: 14px;
+    background: #FFFFFF;
+    margin-bottom: 41px;
+    border: 1px solid #979797;
+    border-radius: 8px;
+
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #979797;
+}
+
+.movies-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.movies {
+    width: 936px;
+
+    margin: 0px 24px 40px 24px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie {
+    width: 168px;
+    height: 301px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+}
+
+.movie__info{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #00000088;
+
+    padding: 9px;
+    width: 100%;
+    height: 40px;
+
+    bottom: 0px;
+
+}
+
+.movie__title{
+    max-width: 10ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #FDFDFD;
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+
+.movie__rating{
+    color: #FBCD6E;
+    font-family: 'Manrope';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4px;
+
+}
+
+.movie__rating img{
+    width: 13px;
+    height: 13px;
+}
+
+.subtitle{
+    margin-bottom: 16px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.highlight {
+    width: 936px;
+    height: 311px;
+    margin-bottom: 122px;
+
+    display: flex;
+} 
+
+.highlight__video-link {
+    display: flex;
+    width: 553px;
+    height: 311px;
+    margin-right: 24px;
+}
+.highlight__video {
+    position: relative;
+    background-color: #00000099;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+    background-blend-mode: multiply;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 553px;
+    height: 311px;
+}
+
+.highlight__info{
+    width: 360px;
+    height: 311px;
+    padding: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.highlight__title-rating{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-bottom: 8px;
+}
+
+.highlight__title{
+    font-family: 'Manrope';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+
+    color: #E183C8;
+
+}
+
+.highlight__rating{
+    font-family: 'Manrope';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: right;
+    color: #A785ED;
+
+}
+
+.highlight__genre-launch{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    gap: 2px;
+    margin-bottom: 36px;
+}
+
+.highlight__genres, .highlight__launch{
+    font-family: 'Manrope';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.highlight__description{
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #000000;
+
+}
+
+.modal{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 100px 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000CC;
+
+}
+
+
+.modal__close{
+    position: absolute;
+    top: 56px;
+    right: 56px;
+
+    width: 34px;
+    height: 34px;
+}
+
+.modal__title{
+    font-family: 'Manrope';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+
+    color: #FFFFFF;
+
+    margin-bottom: 40px;
+
+    max-width: 730px;
+
+}
+
+.modal__img{
+    width: 730px;
+
+    margin-bottom: 21px;
+}
+
+.modal__description{
+    max-width: 730px;
+
+    font-family: 'Manrope';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+
+    color: #FFFFFF;
+
+    margin-bottom: 20px;
+}
+
+.modal__genre-average{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 730px;
+}
+
+.modal__genres{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 730px;
+
+    gap: 12px;
+}
+
+.modal__genre{
+    background-color: #E183C8;
+    color: #FFFFFF;
+
+    font-family: 'Manrope';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+
+    padding: 9px 11px;
+    border-radius: 8px;
+}
+
+.modal__average{
+    background-color: #A785ED;
+    color: #FFFFFF;
+
+    font-family: 'Manrope';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+
+    padding: 9px 11px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
